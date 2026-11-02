@@ -1,0 +1,54 @@
+body{
+    padding:0;
+    margin:0;
+}
+/*
+.container{
+    background-color: gray;
+    height: 400px;
+    width:400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftfront{
+    height: 0;
+    width: 0;
+    border-top: 200px solid white;
+    border-left:200px solid transparent;
+}
+
+.rightfront{
+    height: 0;
+    width: 0;
+    border-top: 200px solid white;
+    border-right:200px solid transparent;
+}
+
+.letFront{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    width: calc(100vw - 50%);
+    height: calc(100vh - 80%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contain{
+    
+}
+*/
+
+
+.tryme {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 8 / 5;
+    width: 50%;
+    background: teal;
+}
