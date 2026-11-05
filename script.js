@@ -1,23 +1,26 @@
-let Message = 0
-console.log("lkj;lkj;lkj;");
+let tbText = "tut";
+let textCounter = 0
 
-draw = function(){
-console.log("nothing")
-
- if (mouseIsPressed === true) {
-    console.log("click!")
-    "Message.num" +=1
-  } else {
-    console.log("blank")
+document.addEventListener('keyup' , (e) => {
+    if(e.keyCode === 13 || e.keyCode === 32){
+        textCounter+=1
+        cutscene1
+        console.log(textCounter)
     }
- 
-};
+})
+
+console.log(tbText);
+
 function cutscene1(){
-    if("Message.num" == '1'){
-        return 'hello';}
-    else {
-        return 'no 1'
-    };
-};
-//const textbox = document.querySelector('#textbox');
-//textbox.textContent = "hi";//
+    if(textCounter == 1){
+        tbText="text 1"
+        console.log(textCounter)
+    }
+    else if(textCounter == 2){
+        tbText="text 2"
+        console.log(textCounter)
+    }
+}
+
+    const textbox = document.querySelector('#textbox');
+    textbox.textContent = tbText;
