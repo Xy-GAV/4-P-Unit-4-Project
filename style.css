@@ -26,3 +26,15 @@ body{
     bottom: 5%;
     position: fixed;
 }
+
+#nameTag{
+    background-color: gray;
+    width: 15vw;
+    height:5vh;
+    min-height: 50px;
+    max-height: 100px;
+}
+
+#tbContainer{
+    
+}
