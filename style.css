@@ -14,31 +14,54 @@ body{
 }
 
 #textBox{
+    position: relative;
+
+    cursor:text;
     font-family: "Alegreya Sans", sans-serif;
     font-weight: 400;
     color: white;
     padding: 3rem;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1.67vw, 2rem);
     background: #040c24;
     background: linear-gradient(180deg,rgba(4, 12, 36, 0.9) 0%, rgba(3, 37, 56, 0.77) 100%);
-    width: 80vw;
-    height:40vh;
+    width: clamp(20rem,75vw,90rem);
+    height: clamp(1rem,7vh,5rem);
     min-height: 150px;
     max-height: 250px;
 }
 
 #nameTag{
+    position: relative;
+
+
     font-family: "Julius Sans One", sans-serif;
-    font-size: 3rem;
+    font-size: clamp(2rem, 2.5vw, 3rem);
     background-color: gray;
-    width: 30rem;
-    height:7rem;
+    width: clamp(18rem, 25vw, 30rem);
+    height: clamp(5rem, 10.3vh, 7rem);
+    text-align: center;
+    vertical-align: middle;
+    line-height: clamp(5rem, 10.3vh, 7rem);
 }
 
 #tbContainer{
-    margin: auto;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    top: calc(100vh - clamp(23rem, 40vh, 30rem));
+    left: 0;
+    width: clamp(20rem,44vw,30rem);
+    padding: 20px;
     width: fit-content;
-    height: auto;
+    /*height: 95vh;*/
     flex-direction:column-reverse;
     display: flex;
 }
+
+#sprite1{
+    background-color: gray;
+    width: clamp(20rem,25vw,30rem);
+    position: relative;
+}
+ /*height: clamp(20rem,44vh,30rem);
