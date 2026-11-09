@@ -1,6 +1,7 @@
 body{
     padding:0;
     margin:0;
+    background-color: darkgrey;
 }
 
 .tryme {
@@ -21,13 +22,26 @@ body{
     font-weight: 400;
     color: white;
     padding: 3rem;
-    font-size: clamp(1.5rem, 1.67vw, 2rem);
+    font-size: clamp(.9rem, 1.67vw, 2rem);
     background: #040c24;
     background: linear-gradient(180deg,rgba(4, 12, 36, 0.9) 0%, rgba(3, 37, 56, 0.77) 100%);
     width: clamp(20rem,75vw,90rem);
-    height: clamp(1rem,7vh,5rem);
-    min-height: 150px;
-    max-height: 250px;
+    height: clamp(4rem,15vh,8rem);
+    /* min-height: 150px;
+    max-height: 250px; */
+
+
+    border-style:solid;
+    border-width: 25px 0 0 0;
+    border-image-width: 25px ;
+  border-image-slice: 86 fill;
+  border-image-repeat: round;
+  border-image-outset: 27px;
+    border-image-source:url(VineBorder.png);
+    z-index: 100;
+    border-color: transparent;
+
+
 }
 
 #nameTag{
@@ -49,7 +63,7 @@ body{
     left: 0; 
     right: 0; 
     margin-inline: auto; 
-    top: calc(100vh - clamp(23rem, 40vh, 30rem));
+    top: calc(100vh - clamp(19rem, 46vh, 30rem));
     left: 0;
     width: clamp(20rem,44vw,30rem);
     padding: 20px;
