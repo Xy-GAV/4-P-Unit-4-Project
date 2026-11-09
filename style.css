@@ -78,4 +78,14 @@ body{
     width: clamp(20rem,25vw,30rem);
     position: relative;
 }
- /*height: clamp(20rem,44vh,30rem);
+ /*height: clamp(20rem,44vh,30rem);*/
+
+ #introContainer{
+    margin: auto;
+    background-color: transparent;
+    background-image: url(Sterling\ Secrets.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 90vw;
+    height: 40vh;
+ }

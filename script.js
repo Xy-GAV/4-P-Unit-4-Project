@@ -2,7 +2,7 @@ const textBox = document.getElementById("textBox");
 let speaker = "";
 let speakerFull = "";
 let typing = false;
-let typeSpeed = 50;
+let typeSpeed = 30;
 
 let ct1Text = [
     "",
@@ -65,6 +65,7 @@ function typerep(Element){
     let i = 0;
     const Text = document.getElementById("textBox").textContent;
     $("#textBox").text("");
+    console.log(Text)
 
     const IntervalID = setInterval(function(){
         Element.innerHTML+= Text[i];
@@ -72,22 +73,26 @@ function typerep(Element){
 
         // document.addEventListener('keyup' , (e) => {
         //     if(typing=true && e.keyCode === 13 || e.keyCode === 32){
+        //         clearInterval(IntervalID);
         //         $("#textBox").text("");
         //         Element.innerHTML = Text;
-        //         i === Text.length;
+        //         i = 0;
         //         typing=false
+        //         console.log(i)
         //         return;
         //     }
         // })
         
 
         if(i === Text.length){
+             console.log(i)
             clearInterval(IntervalID);
             typing=false
         }
 
     },typeSpeed)
 }
+
 
 function nameTag(){
     if(ct1Text[textCounter].includes("BlmSl")){
@@ -127,6 +132,7 @@ function nameTag(){
 }
 
 function cutscene1(){
+    // $("#textBox").text("");
     $("#textBox").text(ct1Text[textCounter].replace(speaker, ""));
     $("#nameTag").text(speakerFull)
 
