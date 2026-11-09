@@ -1,6 +1,8 @@
 const textBox = document.getElementById("textBox");
-let speaker = ""
-let speakerFull = ""
+let speaker = "";
+let speakerFull = "";
+let typing = false;
+let typeSpeed = 50;
 
 let ct1Text = [
     "",
@@ -19,28 +21,73 @@ let ct1Text = [
 
 let textCounter = 0;
 
+//----------------------------Variables----------------------------------------//
+
+
+//When return pressed
+
 document.addEventListener('keyup' , (e) => {
     if(e.keyCode === 13 || e.keyCode === 32){
-        textCounter+=1
-        nameTag();
-        cutscene1();
-        console.log(textCounter);
+        if(typing===false){
+            console.log(typeSpeed);
+            textCounter+=1
+            nameTag();
+            cutscene1();
+            console.log(textCounter);
+            typerep(document.getElementById('textBox'));
+            console.log(typing)
+        }
+        
     }
 })
 
-// function typewrite(){
-//     var i = 0;
-//     var Text = document.getElementById("textBox").textContent;
-//     //console.log(Text);
-//     $("#textBox").text("");
+// document.addEventListener('keyup' , (e) => {
+//     if(e.keyCode === 69){
+//         typeSpeed = 40;
+//         console.log(typeSpeed);
+//     }
+// })
 
-//     if (i < Text.length) {
-//     document.getElementById("textBox").innerHTML += Text.charAt(i);
-//     i+=1;
-//     setTimeout(typewrite, 1000);
-//     console.log(i);
-//   };
-//}
+// document.addEventListener('keydown' , (e) => {
+//     if(e.keyCode === 69){
+//         typeSpeed = 10
+//         console.log(typeSpeed);
+//     } else{
+//         typeSpeed = 40;
+//         console.log(typeSpeed);
+//     }
+// })
+
+//--------------------Functions------------------------------------------//
+
+function typerep(Element){
+    typing = true;
+    let i = 0;
+    const Text = document.getElementById("textBox").textContent;
+    $("#textBox").text("");
+
+    const IntervalID = setInterval(function(){
+        Element.innerHTML+= Text[i];
+        i++;
+
+        // document.addEventListener('keyup' , (e) => {
+        //     if(typing=true && e.keyCode === 13 || e.keyCode === 32){
+        //         $("#textBox").text("");
+        //         Element.innerHTML = Text;
+        //         i === Text.length;
+        //         typing=false
+        //         return;
+        //     }
+        // })
+        
+
+        if(i === Text.length){
+            clearInterval(IntervalID);
+            typing=false
+        }
+
+    },typeSpeed)
+}
 
 function nameTag(){
     if(ct1Text[textCounter].includes("BlmSl")){
