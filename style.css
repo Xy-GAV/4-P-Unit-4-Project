@@ -32,7 +32,7 @@ body{
 
 
     border-style:solid;
-    border-width: 25px 0 0 0;
+    border-width: 0 0 0 0;
     border-image-width: 25px ;
   border-image-slice: 86 fill;
   border-image-repeat: round;
@@ -73,9 +73,15 @@ body{
     display: flex;
 }
 
+/*--------------------------------*/
+
 #sprite1{
-    background-color: gray;
+    background-image: url(BlmSol.png);
+    background-size: 1000%;
+    background-repeat: no-repeat;
+    background-color: transparent;
     width: clamp(20rem,25vw,30rem);
+    height: clamp(20rem,25vw,30rem);
     position: relative;
 }
  /*height: clamp(20rem,44vh,30rem);*/
@@ -84,8 +90,10 @@ body{
     margin: auto;
     background-color: transparent;
     background-image: url(Sterling\ Secrets.png);
-    background-size:cover;
+    background-size:contain;
     background-repeat: no-repeat;
     width: 90vw;
-    height: 40vh;
+    height: 90vh;
+    align-content: center;
  }
+
