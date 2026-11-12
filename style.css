@@ -84,9 +84,10 @@ body{
     height: clamp(20rem,25vw,30rem);
     position: relative;
 }
- /*height: clamp(20rem,44vh,30rem);*/
 
- #introContainer{
+/*height: clamp(20rem,44vh,30rem);*/
+
+#introContainer{
     margin: auto;
     background-color: transparent;
     background-image: url(Sterling\ Secrets.png);
@@ -95,5 +96,46 @@ body{
     width: 90vw;
     height: 90vh;
     align-content: center;
- }
+}
 
+/*--------------------------------*/
+
+.UIbutton{
+    width: 30vw;
+    height: 10vh;
+    background-color: #8c71ed;
+    font-family: "Julius Sans One", sans-serif;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    color: white;
+
+    border-width: 0 0 0 0;
+    border-image-slice: 521;
+    border-image-repeat:stretch;
+
+    border-style:solid;
+    border-width: 0 0 0 0;
+    /* border-image-width: 200px;
+    border-image-outset: 190px; */
+    border-image-width: clamp(1rem,5vw,4rem) ;
+  border-image-outset: clamp(1rem,5vw,4rem);
+    border-image-source:url(Decoborder.png);
+    border-color: transparent;
+
+    cursor: pointer;
+}
+
+.UIcontainer{
+    gap: 10rem;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    top: calc(100vh - clamp(4rem, 30vh, 23rem));
+    left: 0;
+    width: clamp(20rem,44vw,30rem);
+    padding: 20px;
+    width: fit-content;
+
+    flex-direction:row;
+    display: flex;
+}
