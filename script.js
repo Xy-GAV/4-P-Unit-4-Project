@@ -36,6 +36,7 @@ let textCounter = 0;
 
 //When return pressed
 
+
 document.addEventListener('keyup' , (e) => {
     if(e.keyCode === 13 || e.keyCode === 32){
         if(typing===false){
@@ -48,6 +49,9 @@ document.addEventListener('keyup' , (e) => {
             console.log(typing);
         }
         
+    }
+    if(textCounter===1){
+        document.getElementById("TUTbutton").style.display = "none"
     }
 })
 
@@ -107,6 +111,9 @@ function typerep(Element){
 function nameTag(){
     if(ct1Text[textCounter].includes("BlmSl")){
 
+        document.getElementById("sprite1").style.backgroundImage = "url(BlmSol.png)"
+        document.getElementById("sprite1Exp").style.backgroundImage = "url(BlmSol.png)"
+
         console.log("Sol is talking");
         speaker = "BlmSl";
         
@@ -136,6 +143,9 @@ function nameTag(){
         
         speakerFull = "";
         console.log(speakerFull);
+
+        document.getElementById("sprite1").style.backgroundImage = "none"
+        document.getElementById("sprite1Exp").style.backgroundImage = "none"
     };
     
     
