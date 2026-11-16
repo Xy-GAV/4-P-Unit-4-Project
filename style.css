@@ -205,7 +205,7 @@ color: white;
     left: 0; 
     right: 0; 
     margin-inline: auto; 
-    top: calc(100vh - clamp(4rem, 30vh, 23rem));
+    top: calc(100vh - clamp(4rem, 25vh, 23rem));
     left: 0;
     width: clamp(20rem,44vw,30rem);
     padding: 20px;
