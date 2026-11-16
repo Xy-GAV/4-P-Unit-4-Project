@@ -26,7 +26,9 @@ let ct1Text = [
     " ",
     "Small\’Spot and Black\’Wisp were their uncle\’s problems should they awake.",
     " ",
-    "You. You were going on a walk.",
+    "You.",
+    "BlmSl  ",
+    "You were going on a walk."
 ];
 
 let textCounter = 0;
